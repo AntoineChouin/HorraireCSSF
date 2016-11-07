@@ -1,9 +1,12 @@
+/* line 4, scssmain.scss */
 .container {
   border-color: #3bbfce;
   color: #2b9eab; }
+  /* line 7, scssmain.scss */
   .container h1 {
     width: 100%;
     font-family: cursive; }
+  /* line 11, scssmain.scss */
   .container .content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -15,6 +18,7 @@
     justify-content: space-between;
     background-color: #1e486c;
     color: #a8c9e6; }
+    /* line 16, scssmain.scss */
     .container .content p {
       -webkit-align-content: stretch;
       -ms-flex-line-pack: stretch;
