@@ -1,4 +1,6 @@
-$primary-color: #3bbfce;
-$secondary-color: #428bca;
+@import "color";
+@import "font";
 $margin: 16px;
-$fontfamily: cursive;
+$break-small: 320px;
+$break-medium: 760px;
+$break-large: 1200px;

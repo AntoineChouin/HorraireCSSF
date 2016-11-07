@@ -1,13 +1,29 @@
-/* line 4, scssmain.scss */
-.container {
+@import url("https://fonts.googleapis.com/css?family=Economica|Oswald");
+/* line 5, scssmain.scss */
+body {
+  padding-bottom: 50px; }
+
+/* line 8, scssmain.scss */
+.container-fluid {
   border-color: #3bbfce;
   color: #2b9eab; }
-  /* line 7, scssmain.scss */
-  .container h1 {
-    width: 100%;
-    font-family: cursive; }
   /* line 11, scssmain.scss */
-  .container .content {
+  .container-fluid .titre {
+    color: #ca4247;
+    text-align: center; }
+  /* line 16, scssmain.scss */
+  .container-fluid i.titre {
+    display: inline;
+    direction: ltr;
+    width: 20% !important;
+    border-color: #4fc6d3; }
+  /* line 24, scssmain.scss */
+  .container-fluid h1.titre {
+    color: #ca4247;
+    font-family: "Economica", sans-serif; }
+  /* line 28, scssmain.scss */
+  .container-fluid .content {
+    font-family: "Oswald";
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -16,10 +32,57 @@
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     background-color: #1e486c;
-    color: #a8c9e6; }
-    /* line 16, scssmain.scss */
-    .container .content p {
-      -webkit-align-content: stretch;
-      -ms-flex-line-pack: stretch;
-      align-content: stretch; }
+    color: #a8c9e6;
+    margin: 16px; }
+    /* line 39, scssmain.scss */
+    .container-fluid .content .border {
+      border: 1px solid blue; }
+    @media screen and (max-width: 760px) {
+      /* line 28, scssmain.scss */
+      .container-fluid .content {
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: space-between;
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+        margin: 16px;
+        padding: 16px;
+        color: #ca4247; } }
+
+/* line 52, scssmain.scss */
+[ng-app^="myApp"] {
+  background-color: forestgreen; }
+  /* line 54, scssmain.scss */
+  [ng-app^="myApp"] a[role="button"] {
+    background-color: #0080ff;
+    color: white;
+    width: 5em; }
+  /* line 59, scssmain.scss */
+  [ng-app^="myApp"] .container-fluid {
+    width: 100%; }
+    /* line 61, scssmain.scss */
+    [ng-app^="myApp"] .container-fluid .panel {
+      background: tomato;
+      background: -webkit-linear-gradient(legacy-direction(hotpink), tomato);
+      background: -webkit-gradient(linear, left top, left bottom, from(hotpink), to(tomato));
+      background: -webkit-linear-gradient(hotpink, tomato);
+      background: linear-gradient(hotpink, tomato); }
