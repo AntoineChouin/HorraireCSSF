@@ -1,0 +1,25 @@
+{
+  "name": "horrairecssf",
+  "version": "1.0.0",
+  "description": "Horraires sur les patinoires du CSSF",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntoineChouin/HorraireCSSF/commit/5e0afc8ce1256004c57bbc14e1c729c013562083"
+  },
+  "keywords": [
+    "Horraire",
+    "CSSF"
+  ],
+  "author": "Le Gentil Barbu",
+  "license": "UNLICENSED"
+}

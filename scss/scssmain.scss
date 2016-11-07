@@ -1,0 +1,20 @@
+//@import "variable";
+//@import "normalize";
+@import "variable/variables";
+.container {
+  border-color: $primary-color;
+  color: darken($primary-color, 10%);
+  h1 {
+    width: 100%;
+    font-family: $fontfamily;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    background-color: darken($secondary-color, 25.5%);
+    color: lighten($secondary-color, 25.5%);
+    p {
+      align-content: stretch;
+    }
+  }
+}

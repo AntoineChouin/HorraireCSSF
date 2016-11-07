@@ -1,0 +1,21 @@
+.container {
+  border-color: #3bbfce;
+  color: #2b9eab; }
+  .container h1 {
+    width: 100%;
+    font-family: cursive; }
+  .container .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #1e486c;
+    color: #a8c9e6; }
+    .container .content p {
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch; }
