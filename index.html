@@ -5,24 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Antoine Chouinard-Brochu">
   <title>Starter Template for Bootstrap 3.3.7</title>
   <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/scssmain.css">
-  <style>
-    body {
-      padding-top: 50px;
-    }
-    
-    .starter-template {
-      padding: 40px 15px;
-      text-align: center;
-    }
-
-  </style>
-
   <!--[if IE]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -30,8 +18,8 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -53,25 +41,69 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container-fluid">
     <header>
-      <h1>Is this something good</h1>
-      <section>
+      <h1 class="titre">Is this something good</h1>
+      <section class="content">
+        <i class="fa fa-thermometer-empty fa-5x"></i>
+        <i class="fa fa-thermometer-quarter fa-5x" aria-hidden="true"></i>
         <i class="fa fa-thermometer-half fa-5x" aria-hidden="true"></i>
-        <i class="fa fa-thermometer-full fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-thermometer-three-quarters fa-5x" aria-hidden="true"></i>
+        <i class="fa fa-thermometer-full fa-5x" aria-hidden="true"></i>
       </section>
     </header>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita accusamus, ipsum assumenda reiciendis, inventore ad adipisci sit unde perspiciatis, recusandae dignissimos totam atque consequatur, fuga voluptatum officia voluptas. Molestias, consequatur.</p>
-      <p class="border">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ex fuga assumenda mollitia nostrum, sequi eligendi et consectetur, repudiandae eos soluta tempore, nesciunt facere cumque? Minus quidem dolores eaque, perspiciatis.</p>
-      <p class="border">Vero doloribus ab possimus hic, fugiat odit assumenda, dignissimos porro distinctio in consectetur laudantium explicabo ad culpa eius id! Veritatis quisquam, non velit. Odit dolorem, officia molestiae enim voluptate beatae?</p>
-      <p class="border">Hic sit perferendis dolorum corrupti aperiam alias unde iste placeat deleniti ut quasi, ex quisquam doloribus eos nisi consequatur a quam labore nobis voluptatem. Enim provident minima fugit itaque sapiente?</p>
-      <p class="border">Necessitatibus fuga, excepturi sint dignissimos nulla repudiandae sit doloribus reprehenderit similique in dolores maiores ullam dolorem alias laborum quidem. Impedit eos amet maiores consequuntur dolores, aspernatur tempore saepe accusantium corporis.</p>
-    </div>
+
   </div>
 
+  <article ng-app="myApp">
+    <div ng-controller="controllerName">
+      <div class="container-fluid">
+        <div class="row">
+          <article class="col-md-6 col-sm-12 col-xs-12" ng-repeat=" jedi in jedis">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-primary">
+                <header class="panel-heading" role="tab" id="headingOne">
+
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{jedi.id}}" aria-expanded="true" aria-controls="collapseOne">
+                    <h4 class="panel-title">
+                    test
+         {{jedi.nom.prenom + '  ' +jedi.id}}</h4> </a>
+
+                </header>
+                <div id="{{jedi.id}}" class="panel-collapse collapse collapsing out" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">{{jedi.species}}</li>
+                      <li class="list-group-item">{{jedi.gender}}</li>
+                      <li class="list-group-item">{{jedi.physique.grandeur}}</li>
+                      <li class="list-group-item">{{jedi.physique.poids}}</li>
+                      <li class="list-group-item">{{jedi.physique.yeux}}</li>
+                      <li class="list-group-item">{{jedi.physique.cheveu}}</li>
+                      <li class="list-group-item">{{jedi.jedi.rang}}</li>
+                      <li class="list-group-item">{{jedi.jedi.lame}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+    </div>
+  </article>
+  <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    console.log("Ahah Am I dead?");
+
+  </script>
+
+
 </body>
 
 </html>

@@ -1,20 +1,65 @@
 //@import "variable";
 //@import "normalize";
 @import "variable/variables";
-.container {
+@import "helpers/mixins"; //style pour le style
+body {
+  padding-bottom: 50px;
+}
+.container-fluid {
   border-color: $primary-color;
   color: darken($primary-color, 10%);
-  h1 {
-    width: 100%;
-    font-family: $fontfamily;
+  .titre {
+    //    font-family: $economica,sans-serif;
+    color: $titre-RolCoui;
+    text-align: center;
+  }
+  i.titre {
+    display: inline;
+    direction: ltr;
+    width: 20% !important;
+    //    margin: $margin;
+    //    padding: $margin;
+    border-color: lighten($primary-color, 5%);
+  }
+  h1.titre {
+    color: $titre-RolCoui;
+    font-family: $economica, sans-serif;
   }
   .content {
+    font-family: $oswald;
     display: flex;
     justify-content: space-between;
+    align-content: space-around;
+    flex-flow: row nowrap;
+    align-content: stretch;
+    align-items: flex-start;
     background-color: darken($secondary-color, 25.5%);
     color: lighten($secondary-color, 25.5%);
-    p {
-      align-content: stretch;
+    margin: $margin;
+    .border {
+      border: 1px solid blue;
+    }
+    @media screen and (max-width: $break-medium) {
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: space-between;
+      margin: $margin;
+      padding: $margin;
+      color: $titre-RolCoui;
+    }
+  }
+}
+[ng-app^="myApp"] {
+  background-color: forestgreen;
+  a[role="button"] {
+    background-color: $pure-blue;
+    color: lighten( saturate( adjust-hue($pure-blue, 25%), 35%), 50%);
+    width: 5em;
+  }
+  .container-fluid {
+    width: 100%;
+    .panel {
+      @include linear-gradient(hotpink, tomato);
     }
   }
 }
