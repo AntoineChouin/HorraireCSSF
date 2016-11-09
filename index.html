@@ -8,7 +8,7 @@
   <meta name="author" content="Antoine Chouinard-Brochu">
   <title>Starter Template for Bootstrap 3.3.7</title>
   <link rel="shortcut icon" href="">
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/scssmain.css">
   <!--[if IE]>
@@ -21,15 +21,7 @@
   <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Project name</a>
-      </div>
-
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Project name</a> </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">Home</a></li>
@@ -40,23 +32,24 @@
       <!--.nav-collapse -->
     </div>
   </nav>
-
   <div class="container-fluid">
     <header>
       <h1 class="titre">Is this something good</h1>
-      <section class="content">
-        <i class="fa fa-thermometer-empty fa-5x"></i>
-        <i class="fa fa-thermometer-quarter fa-5x" aria-hidden="true"></i>
-        <i class="fa fa-thermometer-half fa-5x" aria-hidden="true"></i>
-        <i class="fa fa-thermometer-three-quarters fa-5x" aria-hidden="true"></i>
-        <i class="fa fa-thermometer-full fa-5x" aria-hidden="true"></i>
-      </section>
+      <section class="content"> <i class="fa fa-thermometer-empty fa-5x"></i> <i class="fa fa-thermometer-quarter fa-5x" aria-hidden="true"></i> <i class="fa fa-thermometer-half fa-5x" aria-hidden="true"></i> <i class="fa fa-thermometer-three-quarters fa-5x" aria-hidden="true"></i> <i class="fa fa-thermometer-full fa-5x" aria-hidden="true"></i> </section>
     </header>
-
   </div>
-
   <article ng-app="myApp">
+
+    <div ng-controller="controllerPost">
+      <ul class="list-group" ng-repeat=" post in posts">
+        <li class="list-group-item">{{post.posts}}</li>
+        <li class="list-group-item">{{post.title}}</li>
+        <li class="list-group-item">{{post.sexe}}</li>
+      </ul>
+
+    </div>
     <div ng-controller="controllerName">
+
       <div class="container-fluid">
         <div class="row">
           <article class="col-md-6 col-sm-12 col-xs-12" ng-repeat=" jedi in jedis">
@@ -90,8 +83,6 @@
 
         </div>
       </div>
-
-
     </div>
   </article>
   <script src="node_modules/angular/angular.js"></script>
@@ -102,8 +93,6 @@
     console.log("Ahah Am I dead?");
 
   </script>
-
-
 </body>
 
 </html>

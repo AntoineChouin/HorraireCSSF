@@ -4,7 +4,7 @@ myConFun.$inject = ["$scope"];
 
 function myConFun($scope) {
   $scope.jedis = [{
-    id: "obiWanKen",
+    id:"obiWanKen",
     nom: {
       prenom: "Obi-Wan",
       famille: "kenobi"
@@ -23,7 +23,7 @@ function myConFun($scope) {
       lame: "simple"
     }
   }, {
-    id: "grandYoda",
+    id:"grandYoda",
     nom: {
       prenom: "Yoda",
     },
@@ -43,6 +43,13 @@ function myConFun($scope) {
   }];
 }
 
-$('#myCollapsible').collapse({
-  toggle: false
-})
+app.controller("controllerPost", myPost);
+myPost.$inject = ["$scope"];
+
+function myPost($scope) {
+  $scope.posts = [{
+    "posts": "post",
+    "title": "title",
+    "sexe": "sexe"
+  }];
+}
