@@ -1,25 +1,5 @@
 
-$color_celeste_approx: #ccc;
-$gold: gold;
-$limegreen: #7be8bb;
-$link: #15c7b0;
-$visit: #5715c7;
-$hover: #85c715;
-$active:#15c757;
-$red: #f00;
-$japanese_laurel: #008000;
-$color_royal_blue: #66f;
-$color_charlotte: #afeafe;
-$color_goldenrod: #fdd763;
-$white: #fff;
-$tradewind: #55b6ab;
-$hollywood_cerise: #f00109b;
-$cyan_aqua: #0ff;
-$colornobelapprox: #b3b3b3;
-$color_citron_approx: #990;
-$color_bittersweet_approx: #f66;
-$color_ripe_lemon_approx: #f0d5010;
-
+@import "variable/variables";
 
 .page-header {
   h2 {

@@ -1,23 +1,13 @@
-/* line 1, testdesign.scss */
-.no-flexbox .box {
-  color: red;
-}
-
-/* line 4, testdesign.scss */
-.flexbox .box {
-  color: green;
-}
-
-/* line 8, testdesign.scss */
+/* line 5, testdesign.scss */
 .page-header h2 {
   font-family: sans-serif;
   padding: 0.4em 1em 0.5em;
   cursor: pointer;
   text-align: center !important;
-  background-color: #6666ff;
+  background-color: #ccccff;
 }
 
-/* line 16, testdesign.scss */
+/* line 13, testdesign.scss */
 .wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,7 +19,7 @@
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
-/* line 21, testdesign.scss */
+/* line 18, testdesign.scss */
 .wrap .cell {
   display: -webkit-box;
   display: -webkit-flex;
@@ -39,7 +29,7 @@
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
-/* line 25, testdesign.scss */
+/* line 22, testdesign.scss */
 .wrap .horaire {
   display: -webkit-box;
   display: -webkit-flex;
@@ -53,13 +43,13 @@
   width: -webkit-calc(30%);
   width: calc(30%);
 }
-/* line 30, testdesign.scss */
+/* line 27, testdesign.scss */
 .wrap .horaire .heure,
 .wrap .horaire .categorie {
   font-size: 125%;
   color: #fdd763;
 }
-/* line 36, testdesign.scss */
+/* line 33, testdesign.scss */
 .wrap .horaire .heure {
   text-align: center;
   width: 100% !important;
@@ -67,17 +57,17 @@
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
-/* line 40, testdesign.scss */
+/* line 37, testdesign.scss */
 .wrap .horaire .heure span,
 .wrap .horaire .heure li {
   color: green;
 }
-/* line 45, testdesign.scss */
+/* line 42, testdesign.scss */
 .wrap .horaire .categorie {
   width: -webkit-calc(100%);
   width: calc(100%);
 }
-/* line 49, testdesign.scss */
+/* line 46, testdesign.scss */
 .wrap .club {
   display: -webkit-box;
   display: -webkit-flex;
@@ -85,14 +75,14 @@
   display: flex;
   width: 60%;
 }
-/* line 56, testdesign.scss */
+/* line 53, testdesign.scss */
 .wrap .club .equipe {
   width: -webkit-calc(75%);
   width: calc(75%);
   color: white;
   background-color: #55b6ab;
 }
-/* line 61, testdesign.scss */
+/* line 58, testdesign.scss */
 .wrap .club .vestiaire {
   width: -webkit-calc(25%);
   width: calc(25%);
@@ -100,7 +90,7 @@
   color: aqua;
 }
 
-/* line 68, testdesign.scss */
+/* line 65, testdesign.scss */
 .flex-wrapping {
   width: -webkit-calc(100%);
   width: calc(100%);
@@ -110,12 +100,12 @@
   background-color: #b3b3b3;
   text-transform: capitalize;
 }
-/* line 75, testdesign.scss */
+/* line 72, testdesign.scss */
 .flex-wrapping .evenement {
   margin: 2.5% auto;
   background-color: #999900;
 }
-/* line 79, testdesign.scss */
+/* line 76, testdesign.scss */
 .flex-wrapping .flex-heading {
   width: 100%;
   -webkit-flex-flow: row wrap;
@@ -123,7 +113,7 @@
   flex-flow: row wrap;
   background-color: #ff6666;
 }
-/* line 83, testdesign.scss */
+/* line 80, testdesign.scss */
 .flex-wrapping .flex-heading .cell {
   height: -webkit-calc(4rem);
   height: calc(4rem);
@@ -131,7 +121,7 @@
   -ms-flex-line-pack: center;
   align-content: center;
 }
-/* line 88, testdesign.scss */
+/* line 85, testdesign.scss */
 .flex-wrapping .flex-body {
   width: 100%;
   -webkit-flex-flow: row wrap;
@@ -143,7 +133,7 @@
   -ms-flex-align: center;
   align-items: center;
 }
-/* line 94, testdesign.scss */
+/* line 91, testdesign.scss */
 .flex-wrapping .flex-body .equipe figure {
   display: -webkit-box;
   display: -webkit-flex;
@@ -157,12 +147,12 @@
   -ms-flex-align: center;
   align-items: center;
 }
-/* line 98, testdesign.scss */
+/* line 95, testdesign.scss */
 .flex-wrapping .flex-body .equipe figure img {
   max-width: 100px;
   max-height: 100px;
 }
-/* line 103, testdesign.scss */
+/* line 100, testdesign.scss */
 .flex-wrapping .flex-body .equipe figure figcaption {
   width: 100%;
   height: 50%;
