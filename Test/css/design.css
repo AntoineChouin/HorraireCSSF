@@ -1,0 +1,61 @@
+.table .wrap {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.table .cell {
+  display: table-cell;
+  height: 3rem;
+  vertical-align: middle;
+}
+.table .description {
+  background-color: #ccc;
+  width: 80%;
+}
+.table .add {
+  background-color: gold;
+  width: 10%;
+  text-align: center;
+}
+.table .remove {
+  background-color: red;
+  width: 10%;
+  text-align: center;
+}
+
+.flex .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.flex .cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex .description {
+  background-color: #ccc;
+  width: 80%;
+}
+.flex .add {
+  background-color: gold;
+  width: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.flex .remove {
+  background-color: red;
+  width: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

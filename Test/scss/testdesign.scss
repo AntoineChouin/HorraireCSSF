@@ -1,0 +1,128 @@
+
+$color_celeste_approx: #ccc;
+$gold: gold;
+$limegreen: #7be8bb;
+$link: #15c7b0;
+$visit: #5715c7;
+$hover: #85c715;
+$active:#15c757;
+$red: #f00;
+$japanese_laurel: #008000;
+$color_royal_blue: #66f;
+$color_charlotte: #afeafe;
+$color_goldenrod: #fdd763;
+$white: #fff;
+$tradewind: #55b6ab;
+$hollywood_cerise: #f00109b;
+$cyan_aqua: #0ff;
+$colornobelapprox: #b3b3b3;
+$color_citron_approx: #990;
+$color_bittersweet_approx: #f66;
+$color_ripe_lemon_approx: #f0d5010;
+
+
+.page-header {
+  h2 {
+    font-family: sans-serif;
+    padding: 0.4em 1em 0.5em;
+    cursor: pointer;
+    text-align: center !important;
+    background-color: lighten($color_royal_blue, 20%);
+  }
+}
+.wrap {
+  display: flex;
+  width: 100%;
+  font-size: 100%;
+  justify-content: space-around;
+  .cell {
+    display: flex;
+    justify-content: space-around;
+  }
+  .horaire {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color_charlotte;
+    width: calc(30%);
+    .heure,
+    .categorie {
+      font-size: 125%;
+      // float:left;
+      color: #fdd763;
+    }
+    .heure {
+      text-align: center;
+      width: 100% !important;
+      flex-flow: column wrap;
+      span,
+      li {
+        color: green;
+      }
+    }
+    .categorie {
+      width: calc(100%);
+    }
+  }
+  .club {
+    display: flex;
+    width: 60%;
+    .equipe,
+    .vestiaire {
+      // text-align: center !important;
+    }
+    .equipe {
+      width: calc(75%);
+      color: white;
+      background-color: #55b6ab;
+    }
+    .vestiaire {
+      width: calc(25%);
+      background-color: #f0109b;
+      color: aqua;
+    }
+  }
+}
+.flex-wrapping {
+  width: calc(100%);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: lighten(grey, 20%);
+  text-transform: capitalize;
+  .evenement {
+    margin: 2.5% auto;
+    background-color: darken(yellow, 20%);
+  }
+  .flex-heading {
+    width: 100%;
+    flex-flow: row wrap;
+    background-color: lighten(red, 20%);
+    .cell {
+      height: calc(4rem);
+      align-content: center;
+    }
+  }
+  .flex-body {
+    width: 100%;
+    flex-flow: row wrap;
+    font-size: 150%;
+    align-items: center;
+    .equipe {
+      figure {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img {
+          // display:none;
+          max-width: 100px;
+          max-height: 100px;
+        }
+        figcaption {
+          width: 100%;
+          height: 50%;
+          background-color: #f0d510;
+        }
+      }
+    }
+  }
+}
