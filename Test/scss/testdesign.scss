@@ -1,106 +1,113 @@
-
 @import "variable/variables";
+@import "mixins/mixin";
+@import "bourbon";
+@import "neat";
+body {
+  padding-bottom: 70px;
+}
 
 .page-header {
   h2 {
     font-family: sans-serif;
     padding: 0.4em 1em 0.5em;
     cursor: pointer;
+    color: $visit;
     text-align: center !important;
-    background-color: lighten($color_royal_blue, 20%);
   }
 }
+
 .wrap {
   display: flex;
+  justify-content: space-around;
+  align-items: stretch;
   width: 100%;
   font-size: 100%;
-  justify-content: space-around;
+  background-color: lighten($color_charlotte, 25%);
   .cell {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content:space-around;
   }
   .horaire {
-    display: flex;
-    justify-content: space-between;
-    background-color: $color_charlotte;
     width: calc(30%);
-    .heure,
-    .categorie {
-      font-size: 125%;
-      // float:left;
-      color: #fdd763;
-    }
     .heure {
+      font-size: 125%;
+      color: goldenrod;
       text-align: center;
       width: 100% !important;
-      flex-flow: column wrap;
+      //      flex-flow: column wrap;
       span,
       li {
-        color: green;
+        color: $japanese_laurel;
       }
     }
     .categorie {
       width: calc(100%);
+      text-align: center;
     }
   }
   .club {
-    display: flex;
-    width: 60%;
-    .equipe,
-    .vestiaire {
-      // text-align: center !important;
-    }
+    width: calc(70%);
     .equipe {
       width: calc(75%);
-      color: white;
-      background-color: #55b6ab;
+      color: black;
     }
     .vestiaire {
       width: calc(25%);
-      background-color: #f0109b;
-      color: aqua;
+      color: powderblue;
     }
   }
 }
+
 .flex-wrapping {
   width: calc(100%);
   max-width: 100%;
-  margin: 0;
-  padding: 0;
   background-color: lighten(grey, 20%);
   text-transform: capitalize;
+  //  justify-content: space-between;
+  // 
+  //  align-items: flex-end;
   .evenement {
-    margin: 2.5% auto;
-    background-color: darken(yellow, 20%);
+    //    margin: 2.5% auto;
+    //    background-color: darken(yellow, 20%);
   }
   .flex-heading {
-    width: 100%;
+    font-family: $oswald;
+    width: 100% !important;
     flex-flow: row wrap;
     background-color: lighten(red, 20%);
     .cell {
+      width: 100%;
       height: calc(4rem);
-      align-content: center;
+      align-items: stretch;
+      color: $hover;
+      background-color: $color_goldenrod;
     }
   }
   .flex-body {
-    width: 100%;
-    flex-flow: row wrap;
+    font-family: $roboto;
+    //    width: 100%;
     font-size: 150%;
-    align-items: center;
-    .equipe {
+    .club {
+      @include bordered(5px);
+      background-color: mediumvioletred;
+      h3 {
+        @extend .flexbox;
+        //        width: 100%;
+      }
       figure {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        img {
-          // display:none;
-          max-width: 100px;
-          max-height: 100px;
-        }
+        //        @include align-items(stretch);
+        //        @include flex-flow(column wrap);
+        figcaption,
+        img {}
         figcaption {
-          width: 100%;
-          height: 50%;
-          background-color: #f0d510;
+          text-align: right;
+          color: $tradewind;
+        }
+        //    
+        img {
+          max-width: 120px;
+          max-height: 120px;
         }
       }
     }

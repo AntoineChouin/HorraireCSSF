@@ -11,11 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
-  <style>
-    body {
-      padding-bottom: 70px;
-    }
-  </style>
   <link rel="stylesheet" href="css/testdesign.css">
   <!--[if IE]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -43,6 +38,7 @@
   <article class="flex-wrapping">
     <header class="flex-heading">
       <article class="wrap ">
+        <!--       Horaire + heure -->
         <section class="horaire box">
           <div class="cell  heure">Heure</div>
           <div class="cell categorie"> Categorie </div>
@@ -61,33 +57,50 @@
     </header>
     <div class="flex-body box">
       <article class="evenement">
-        <div class="wrap">
-          <section class="horaire box">
+        <div class="wrap box">
+          <!--         section pour les horraires et les-->
+          <section class="horaire ">
             <div class="cell heure">
               <ul class="list-unstyled">
-                <li class="debut">12:00</li>
-                <li>A</li>
+                <li class="debut">12:00</li> <span>à</span>
                 <li class="fin">14:00</li>
               </ul>
             </div>
-            <div class="cell categorie"> <span class="type">Partie</span> <span class="niveau"> Pee-wee AAA</span> </div>
+            <div class="cell categorie">
+              <!--
+              <ul class="list-group">
+                <li class="list-group-item type">Partie</li>
+                <li class="list-group-item niveau">Pee-Wee AAA</li>
+              </ul>
+-->
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading type">Partie</h4>
+                  <p class="list-group-item-text niveau">Pee-Wee AAA</p>
+                </a>
+              </div>
+            </div>
           </section>
           <!-- Club Vesiteur-->
           <section class="club visiteur">
             <div class="cell equipe">
-              <figure>
+              <h3 class="cell equipe_titre">Ancienne-Lorette</h3>
+              <figure class="bg-info">
                 <figcaption class="hidden-md hidden-lg">Équipe: Mustang </figcaption>
-                <figcaption>Ancienne-Lorette </figcaption> <img class="hidden-sm hidden-xs img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Pittsburgh_Pirates_Alternate_logo.png/120px-Pittsburgh_Pirates_Alternate_logo.png" alt="The Pulpit Rock" width="120" height="120"> </figure>
+                <!--                Image Logo      /////// //// --><img class="hidden-sm hidden-xs img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Pittsburgh_Pirates_Alternate_logo.png/120px-Pittsburgh_Pirates_Alternate_logo.png" alt="The Pulpit Rock" width="120" height="120">
+              
+              </figure>
             </div>
             <div class="cell vestiaire">Vestiaire: #8</div>
           </section>
           <!--      Club Local  -->
           <section class="club receveur">
             <div class="cell equipe">
-              <figure class="text-center"> <img class="hidden-sm hidden-xs img-responsive" src="http://vignette1.wikia.nocookie.net/logopedia/images/f/f9/Oakland_Athletics_logo.svg/revision/latest/scale-to-width-down/120?cb=20131012135352" alt="The Pulpit Rock" width="120" height="120">
+              <!--                Ville-->
+              <h3>Sainte-Foy/Sillery</h3>
+              <figure class="bg-warning">
                 <figcaption class="hidden-md hidden-lg">Équipe: Mousquetaire </figcaption>
-                <figcaption>Sainte-Foy </figcaption>
-              </figure>
+                <!--               Logo de l'équipe         --><img class="hidden-sm hidden-xs img-responsive" src="http://vignette1.wikia.nocookie.net/logopedia/images/f/f9/Oakland_Athletics_logo.svg/revision/latest/scale-to-width-down/120?cb=20131012135352" alt="The Pulpit Rock" width="120" height="120"> </figure>
             </div>
             <div class="cell vestiaire">vestiaire: #10</div>
           </section>

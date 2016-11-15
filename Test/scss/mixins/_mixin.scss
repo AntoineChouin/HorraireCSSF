@@ -1,0 +1,14 @@
+@mixin bordered($width) {
+    border: $width solid $link;
+
+    &:hover {
+        border-color: $limegreen;
+    }
+}
+.flexbox{
+  width:100%;
+  color:$color_bittersweet_approx;
+  justify-content: space-around;
+  background-color: $color_citron_approx;
+//  height: 2em;
+}
