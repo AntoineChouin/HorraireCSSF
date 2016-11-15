@@ -1,0 +1,44 @@
+.wrap {
+  display: flex;
+  width: 100%;
+  font-size: 100%;
+  justify-content: space-around;
+  background-color: lighten($color_charlotte, 5%);
+  .cell {
+    display: flex;
+    justify-content: space-around;
+  }
+  .horaire {
+     display: flex;
+    justify-content: space-between;
+      width: calc(30%);
+    .heure {
+      font-size: 125%;
+      color: $color_goldenrod;
+      text-align: center;
+      width: 100% !important;
+      span, li {
+        color: $color_japanese_laurel;
+      }
+
+    }
+    .categorie {
+      width: calc(100%);
+      text-align: center;
+      // width: 100% !important;
+      flex-flow: column wrap;
+//      padding: -32px 20px;
+    }
+  }
+  .club {
+    display: flex;
+    width: 60%;
+    .equipe {
+      width: calc(75%);
+      color: black;
+    }
+    .vestiaire {
+      width: calc(25%);
+    }
+  }
+}

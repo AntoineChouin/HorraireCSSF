@@ -1,14 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald|Roboto:400,400i&subset=latin-ext");
-/* line 8, mixins/_mixin.scss */
-.flexbox, .flex-wrapping .flex-body .club h3 {
-  width: 100%;
-  color: #ff6666;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  background-color: #999900;
-}
-
 /* line 2, /Applications/Prepros.app/Contents/Resources/app.nw/gems/gems/neat-1.6.0/app/assets/stylesheets/grid/_grid.scss */
 * {
   -webkit-box-sizing: border-box;
@@ -16,12 +6,102 @@
   box-sizing: border-box;
 }
 
-/* line 5, testdesign.scss */
+/* line 8, mixins/_mixin.scss */
+.flexbox {
+  width: 100%;
+  color: #ff6666;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-flex-wrap: row wrap;
+  -ms-flex-wrap: row wrap;
+  flex-wrap: row wrap;
+  background-color: #999900;
+  text-transform: uppercase;
+}
+
+/* line 1, layout/_wrap.scss */
+.wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 100%;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  background-color: #c8f1fe;
+}
+/* line 7, layout/_wrap.scss */
+.wrap .cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+/* line 11, layout/_wrap.scss */
+.wrap .horaire {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: -webkit-calc(30%);
+  width: calc(30%);
+}
+/* line 15, layout/_wrap.scss */
+.wrap .horaire .heure {
+  font-size: 125%;
+  color: #fdd763;
+  text-align: center;
+  width: 100% !important;
+}
+/* line 20, layout/_wrap.scss */
+.wrap .horaire .heure span, .wrap .horaire .heure li {
+  color: green;
+}
+/* line 25, layout/_wrap.scss */
+.wrap .horaire .categorie {
+  width: -webkit-calc(100%);
+  width: calc(100%);
+  text-align: center;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+/* line 33, layout/_wrap.scss */
+.wrap .club {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+}
+/* line 36, layout/_wrap.scss */
+.wrap .club .equipe {
+  width: -webkit-calc(75%);
+  width: calc(75%);
+  color: black;
+}
+/* line 40, layout/_wrap.scss */
+.wrap .club .vestiaire {
+  width: -webkit-calc(25%);
+  width: calc(25%);
+}
+
+/* line 6, testdesign.scss */
 body {
   padding-bottom: 70px;
 }
 
-/* line 10, testdesign.scss */
+/* line 11, testdesign.scss */
 .page-header h2 {
   font-family: sans-serif;
   padding: 0.4em 1em 0.5em;
@@ -30,8 +110,63 @@ body {
   text-align: center !important;
 }
 
-/* line 19, testdesign.scss */
-.wrap {
+/* line 20, testdesign.scss */
+.flex-wrapping {
+  width: -webkit-calc(100%);
+  width: calc(100%);
+  max-width: 100%;
+}
+/* line 23, testdesign.scss */
+.flex-wrapping .evenement {
+  margin: 2.5% auto;
+  background-color: #999900;
+}
+/* line 27, testdesign.scss */
+.flex-wrapping .flex-heading {
+  width: 100%;
+  text-transform: capitalize;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  background-color: #ff6666;
+}
+/* line 32, testdesign.scss */
+.flex-wrapping .flex-heading .cell {
+  height: -webkit-calc(4rem);
+  height: calc(4rem);
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  font-size: 2em;
+}
+/* line 39, testdesign.scss */
+.flex-wrapping .flex-body {
+  width: 100%;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  font-size: 150%;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  font-family: "Oswald", sans-serif;
+}
+/* line 45, testdesign.scss */
+.flex-wrapping .flex-body .heure {
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+  -ms-flex-line-pack: start;
+}
+/* line 52, testdesign.scss */
+.flex-wrapping .flex-body .equipe figure {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,115 +174,35 @@ body {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
-  font-size: 100%;
-  background-color: white;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-/* line 26, testdesign.scss */
-.wrap .cell {
-  width: 100%;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-}
-/* line 31, testdesign.scss */
-.wrap .horaire {
-  width: -webkit-calc(30%);
-  width: calc(30%);
-}
-/* line 33, testdesign.scss */
-.wrap .horaire .heure {
-  font-size: 125%;
-  color: goldenrod;
-  text-align: center;
-  width: 100% !important;
-}
-/* line 39, testdesign.scss */
-.wrap .horaire .heure span,
-.wrap .horaire .heure li {
-  color: green;
-}
-/* line 44, testdesign.scss */
-.wrap .horaire .categorie {
-  width: -webkit-calc(100%);
-  width: calc(100%);
-  text-align: center;
-}
-/* line 49, testdesign.scss */
-.wrap .club {
-  width: -webkit-calc(70%);
-  width: calc(70%);
-}
-/* line 51, testdesign.scss */
-.wrap .club .equipe {
-  width: -webkit-calc(75%);
-  width: calc(75%);
-  color: black;
-}
-/* line 55, testdesign.scss */
-.wrap .club .vestiaire {
-  width: -webkit-calc(25%);
-  width: calc(25%);
-  color: powderblue;
-}
-
-/* line 62, testdesign.scss */
-.flex-wrapping {
-  width: -webkit-calc(100%);
-  width: calc(100%);
-  max-width: 100%;
-  background-color: #b3b3b3;
-  text-transform: capitalize;
-}
-/* line 74, testdesign.scss */
-.flex-wrapping .flex-heading {
-  font-family: "Oswald", sans-serif;
-  width: 100% !important;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  background-color: #ff6666;
-}
-/* line 79, testdesign.scss */
-.flex-wrapping .flex-heading .cell {
-  width: 100%;
-  height: -webkit-calc(4rem);
-  height: calc(4rem);
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  color: #fd5010;
-  background-color: #fdd763;
-}
-/* line 87, testdesign.scss */
-.flex-wrapping .flex-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 150%;
-}
-/* line 91, testdesign.scss */
-.flex-wrapping .flex-body .club {
-  border: 5px solid #15c7b0;
-  background-color: mediumvioletred;
-}
-/* line 4, mixins/_mixin.scss */
-.flex-wrapping .flex-body .club:hover {
-  border-color: #7be8bb;
-}
-/* line 103, testdesign.scss */
-.flex-wrapping .flex-body .club figure figcaption {
-  text-align: right;
-  color: #55b6ab;
-}
-/* line 108, testdesign.scss */
-.flex-wrapping .flex-body .club figure img {
+/* line 56, testdesign.scss */
+.flex-wrapping .flex-body .equipe figure img {
   max-width: 120px;
   max-height: 120px;
+}
+/* line 60, testdesign.scss */
+.flex-wrapping .flex-body .equipe figure figcaption {
+  width: 100%;
+  height: 50%;
+}
+/* line 64, testdesign.scss */
+.flex-wrapping .flex-body .equipe figure .vestiaire {
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  color: black;
+}
+
+/* line 73, testdesign.scss */
+.fexbox .box {
+  color: indianred;
+}
+
+/* line 77, testdesign.scss */
+.flexbox .box {
+  color: green;
 }
