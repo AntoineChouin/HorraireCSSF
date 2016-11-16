@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/testdesign.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
   <!--[if IE]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -40,7 +41,7 @@
       <article class="wrap ">
         <!--       Horaire + heure -->
         <section class="horaire box">
-          <div class="cell  heure">Heure</div>
+          <div class="cell heure">Heure</div>
           <div class="cell categorie"> Categorie </div>
         </section>
         <!-- Club Vesiteur-->
@@ -60,10 +61,7 @@
         <div class="wrap box">
           <!--         section pour les horraires et les-->
           <section class="horaire ">
-            <div class="cell heure"> 
-            <span class="debut">17:00</span>
-            <span>à</span>
-            <span class="fin">18:20</span> </div>
+            <div class="cell heure"> <span class="debut">17:00</span> <span>à</span> <span class="fin">18:20</span> </div>
             <div class="cell categorie">
               <!--
               <ul class="list-group">
@@ -71,32 +69,34 @@
                 <li class="list-group-item niveau">Pee-Wee AAA</li>
               </ul>
 -->
-              <div class="list-group"> <span class="list-group-item">
+              <div class="list-group evenement"> <span class="list-group-item">
                   <h4 class="list-group-item-heading type">Partie</h4>
                   <p class="list-group-item-text niveau">Pee-Wee AAA</p>
                 </span> </div>
             </div>
           </section>
-          <!-- Club Vesiteur-->
           <section class="club visiteur">
-            <div class="cell equipe">
-              <h3 class="cell equipe_titre">Ancienne-Lorette</h3>
-              <figure class="bg-info">
-                <figcaption class="hidden-md hidden-lg">Équipe: Mustang </figcaption>
-                <!--                Image Logo      /////// //// --><img class="hidden-sm hidden-xs img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Pittsburgh_Pirates_Alternate_logo.png/120px-Pittsburgh_Pirates_Alternate_logo.png" alt="The Pulpit Rock" width="120" height="120"> </figure>
+            <div class="wrap">
+              <div class="cell equipe">
+                <h3 class="equipe_ville">Sainte-Foy-Sillery</h3>
+                <figure class="cell logo bg-info">
+                  <figcaption class="hidden-md hidden-lg">Equipe des Mousquetaire</figcaption>
+                  <!--                Image Logo      /////// //// --><img class="hidden-sm hidden-xs img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Pittsburgh_Pirates_Alternate_logo.png/120px-Pittsburgh_Pirates_Alternate_logo.png" alt="The Pulpit Rock" width="120" height="120">
+                  <div class="cell vestiaire">Vestiaire: #10</div>
+                </figure>
+              </div>
             </div>
-            <div class="cell vestiaire">Vestiaire: #8</div>
           </section>
-          <!--      Club Local  -->
-          <section class="club receveur">
-            <div class="cell equipe">
-              <!--                Ville-->
-              <h3>Sainte-Foy/Sillery</h3>
-              <figure class="bg-warning">
-                <figcaption class="hidden-md hidden-lg">Équipe: Mousquetaire </figcaption>
-                <!--               Logo de l'équipe         --><img class="hidden-sm hidden-xs img-responsive" src="http://vignette1.wikia.nocookie.net/logopedia/images/f/f9/Oakland_Athletics_logo.svg/revision/latest/scale-to-width-down/120?cb=20131012135352" alt="The Pulpit Rock" width="120" height="120"> </figure>
+          <section class="club local">
+            <div class="wrap">
+              <div class="cell equipe bg-warning">
+                <h3 class="equipe_ville">Ancienne-Lorette</h3>
+                <figure class="cell logo ">
+                  <figcaption class="hidden-md hidden-lg">Equipe des Mousquetaire</figcaption>
+                  <!--               Logo de l'équipe         --><img class="hidden-sm hidden-xs img-responsive" src="http://vignette1.wikia.nocookie.net/logopedia/images/f/f9/Oakland_Athletics_logo.svg/revision/latest/scale-to-width-down/120?cb=20131012135352" alt="The Pulpit Rock" width="120" height="120"> </figure>
+                <div class="cell vestiaire">Vestiaire: #8</div>
+              </div>
             </div>
-            <div class="cell vestiaire">vestiaire: #10</div>
           </section>
         </div>
       </article>

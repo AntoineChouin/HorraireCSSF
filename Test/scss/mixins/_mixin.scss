@@ -5,6 +5,19 @@
         border-color: $limegreen;
     }
 }
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
 .flexbox{
   width:100%;
   color:$color_bittersweet_approx;
@@ -14,3 +27,9 @@
   text-transform: uppercase;
 //  height: 2em;
 }
+ .cell_mixing {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+//      font-size: 2em;
+    }

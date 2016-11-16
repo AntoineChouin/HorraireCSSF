@@ -1,4 +1,10 @@
 @import "font";
+$break-xs: 320px;
+$break-sm: 480px;
+$break-Tab: 768px;
+$break-large: 1024px;
+
+
 $color_celeste_approx: #ccc;
 $gold: gold;
 $limegreen: #7be8bb;
@@ -44,3 +50,7 @@ $color_ripe_lemon_approx: #f0d510;
 
 //fonts
 $font_0: sans-serif;
+
+//dimension
+
+$cellheight:4em;

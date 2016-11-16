@@ -30,10 +30,8 @@ body {
     flex-flow: row wrap;
     background-color: $color_bittersweet_approx;
     .cell {
-      height: calc(4rem);
-      align-items: center;
-      justify-content: space-around;
-      font-size: 2em;
+      height: calc(4em);
+     @extend .cell_mixing;
     }
   }
   .flex-body {
@@ -42,31 +40,25 @@ body {
     font-size: 150%;
     align-items: stretch;
     font-family: $oswald;
-    .heure{
-      flex-flow: column wrap;
-      @include align-content(flex-start);
+    .cell {
+      @extend .cell_mixing;
+      height: calc(#{$cellheight}*1.5);
+      
     }
-   
-   
-    .equipe {
-      figure {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        img {
-          max-width: 120px;
-          max-height: 120px;
-        }
-        figcaption {
-          width: 100%;
-          height: 50%;
-        }
-        .vestiaire {
-          align-content: flex-end;
-          color: black;
-        }
+    .heure {
+      flex-flow: column wrap;
+      @include align-items(center);
+    }
+    .club {
+      @include bordered(2px);
+      justify-content: space-between;
+     
+      img {
+        max-width: 120px;
+        max-height: 120px;
       }
     }
+     
   }
 }
 

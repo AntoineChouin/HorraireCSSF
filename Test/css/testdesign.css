@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* line 8, mixins/_mixin.scss */
+/* line 21, mixins/_mixin.scss */
 .flexbox {
   width: 100%;
   color: #ff6666;
@@ -18,6 +18,21 @@
   flex-wrap: row wrap;
   background-color: #999900;
   text-transform: uppercase;
+}
+
+/* line 30, mixins/_mixin.scss */
+.cell_mixing, .flex-wrapping .flex-heading .cell, .flex-wrapping .flex-body .cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 /* line 1, layout/_wrap.scss */
@@ -132,18 +147,10 @@ body {
 }
 /* line 32, testdesign.scss */
 .flex-wrapping .flex-heading .cell {
-  height: -webkit-calc(4rem);
-  height: calc(4rem);
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  font-size: 2em;
+  height: -webkit-calc(4em);
+  height: calc(4em);
 }
-/* line 39, testdesign.scss */
+/* line 37, testdesign.scss */
 .flex-wrapping .flex-body {
   width: 100%;
   -webkit-flex-flow: row wrap;
@@ -156,53 +163,49 @@ body {
   align-items: stretch;
   font-family: "Oswald", sans-serif;
 }
-/* line 45, testdesign.scss */
+/* line 43, testdesign.scss */
+.flex-wrapping .flex-body .cell {
+  height: -webkit-calc(4em*1.5);
+  height: calc(4em*1.5);
+}
+/* line 48, testdesign.scss */
 .flex-wrapping .flex-body .heure {
   -webkit-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
-  -webkit-align-content: flex-start;
-  align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
 }
 /* line 52, testdesign.scss */
-.flex-wrapping .flex-body .equipe figure {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+.flex-wrapping .flex-body .club {
+  border: 2px solid #15c7b0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+/* line 4, mixins/_mixin.scss */
+.flex-wrapping .flex-body .club:hover {
+  border-color: #7be8bb;
 }
 /* line 56, testdesign.scss */
-.flex-wrapping .flex-body .equipe figure img {
+.flex-wrapping .flex-body .club img {
   max-width: 120px;
   max-height: 120px;
 }
-/* line 60, testdesign.scss */
-.flex-wrapping .flex-body .equipe figure figcaption {
-  width: 100%;
-  height: 50%;
-}
-/* line 64, testdesign.scss */
-.flex-wrapping .flex-body .equipe figure .vestiaire {
-  -webkit-align-content: flex-end;
-  -ms-flex-line-pack: end;
-  align-content: flex-end;
-  color: black;
-}
 
-/* line 73, testdesign.scss */
+/* line 65, testdesign.scss */
 .fexbox .box {
   color: indianred;
 }
 
-/* line 77, testdesign.scss */
+/* line 69, testdesign.scss */
 .flexbox .box {
   color: green;
 }
